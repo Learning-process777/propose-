@@ -101,33 +101,43 @@
 </div>
 
 <!-- Section 4 -->
+<!-- Section 4 -->
 <div id="question" class="section">
   <h2>Do you like it? 💕</h2>
-  <button onclick="showProposal('yes')">Yes</button>
-  <button onclick="showProposal('no')">No</button>
+  <button onclick="showSection('finalProposal')">Next</button>
 </div>
 
 <!-- Section 5 -->
-<div id="proposal" class="section">
+<div id="finalProposal" class="section">
+  <h2>Will you be my partner? 💍</h2>
+  <button onclick="showAnswer('yes')">Yes</button>
+  <button onclick="showAnswer('no')">No</button>
+</div>
+
+<!-- Section 6 -->
+<div id="answer" class="section">
   <h2 id="message"></h2>
 </div>
 
+<script>
 <script>
 function showSection(id) {
   document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
   document.getElementById(id).style.display = 'block';
 }
 
-function showProposal(answer) {
-  showSection('proposal');
-  if (answer === 'yes') {
-    document.getElementById("message").innerHTML = "Will you be my partner? 💍<br><br>I will never disappoint you.";
+function showAnswer(choice) {
+  showSection('answer');
+  if (choice === 'yes') {
+    document.getElementById("message").innerHTML = "I will never disappoint you ❤️";
   } else {
-    document.getElementById("message").innerHTML = "Will you be my partner? 💍<br><br>I will never forget you.";
+    document.getElementById("message").innerHTML = "It's ok, my fate 💔";
   }
-  // Close after 5 seconds
+  // Optionally close after 5 seconds
   setTimeout(() => window.close(), 5000);
 }
+</script>
+
 </script>
 
 </body>
