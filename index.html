@@ -1,17 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For You</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background: pink url('93951d665c688bbc9ca596ac9ff8d7f0.jpg'); /* upload a love pattern image */
+    background: pink url('hearts-pattern.png'); /* upload your love pattern image */
     background-size: cover;
-    margin-top: 50px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+
   .section { display: none; }
-  button { margin: 20px; padding: 10px 20px; font-size: 16px; }
+
+  h2, p {
+    font-size: 5vw;          /* scales with screen size */
+    color: white;            /* romantic white text */
+    font-weight: bold;
+    text-shadow: 2px 2px 6px #000; /* glow for readability */
+    margin: 20px;
+  }
+
+  img {
+    max-width: 90%;
+    height: auto;
+    border: 5px solid hotpink;
+    border-radius: 12px;
+    margin: 20px auto;
+  }
+
+  button {
+    margin: 15px;
+    padding: 15px 30px;
+    font-size: 4vw;          /* scales with screen size */
+    background-color: hotpink;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px #333;
+  }
+  button:hover {
+    background-color: deeppink;
+  }
 </style>
 </head>
 <body>
@@ -25,40 +63,15 @@
 <!-- Section 2 -->
 <div id="note" class="section">
   <h2>My dearest,</h2>
-  <p>मेरी प्यारी भावना, तिमी जुन दिन मेरो जीवनमा आयौ त्यही दिनदेखि मेरो जीवनमा खुसीयाली मात्र आएको छ। लाग्छ कि तिमी छौ र त म छु यो संसारमा। तिम्रो मायामा यति पागल भएको छु कि, तिमीसँग छुट्टिएर बस्न एकछिन पनि सक्दिनँ।
-
-
-तिम्रो मुस्कानमा फूल्छन् मेरो संसारका फूलहरू,
-
-तिम्रै यादमा हराउँछन् मेरो मनका भूलहरू।
-
-जसरी रातलाई उज्यालो पार्छ पूर्णिमाको जनैले,
-
-त्यसैगरी मेरो जीवन सजाएकी छ्यौ तिमीले।
-
-तिम्रो आँखाको गहिराइमा मेरो सिरानी छ,
-
-तिम्रो सुमधुर बोलीमै मेरो सिरानी छ।
-
-संसारका सारा सौन्दर्य एकातिर हुन्छन्,
-
-तर तिम्रो एउटै मुस्कानसामू ती सबै फिक्का हुन्छन्।
-
-तिम्रो अङ्गालो नै मेरो सबैभन्दा सुरक्षित ठाउँ हो,
-
-जहाँ मेरो हरेक धडकनले तिम्रै नाम लिन्छ।
-
-सधैँ यसरी नै मेरो हात थामिरहनू तिमी,
-
-मेरो जिन्दगीको सबैभन्दा सुन्दर उपहार हौ तिमी।</p>
+  <p>From the moment I met you, my life has been brighter. You mean the world to me, and I want to spend every moment making you smile.</p>
   <button onclick="showSection('photo')">Next</button>
 </div>
 
 <!-- Section 3 -->
 <div id="photo" class="section">
   <h2>Here’s me, just for you 💖</h2>
-  <img src="WhatsApp Image 2026-09-05 at 11.25.52.jpeg" alt="My Photo" width="300">
-  <br><br>
+  <img src="myphoto.jpg" alt="My Photo">
+  <br>
   <button onclick="showSection('question')">Next</button>
 </div>
 
